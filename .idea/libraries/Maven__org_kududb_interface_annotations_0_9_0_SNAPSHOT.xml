@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.kududb:interface-annotations:0.9.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kududb/interface-annotations/0.9.0-SNAPSHOT/interface-annotations-0.9.0-20160528.104558-140.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kududb/interface-annotations/0.9.0-SNAPSHOT/interface-annotations-0.9.0-20160528.104558-140-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kududb/interface-annotations/0.9.0-SNAPSHOT/interface-annotations-0.9.0-20160528.104558-140-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

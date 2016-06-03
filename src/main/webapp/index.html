@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- EXTERNAL LIBS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+
+    <!-- EXAMPLE SCRIPT -->
+    <script>
+
+      // onload callback
+      function drawChart() {
+
+        // JSONP request
+
+
+        var jsonData = $.ajax({
+          url: 'http://localhost:8080/stockdata/',
+          dataType: 'jsonp'
+        }).done(function (results) {
+          alert("i");
+          var data = new google.visualization.DataTable();
+
+
+
+          $.each(results, function (i, row) {
+            console.log(row)
+            data.addRow([
+              (new Date(row.ticket)),
+              parseFloat(row.vol),
+            ]);
+          });
+
+          var chart = new google.visualization.LineChart($('#chart').get(0));
+
+          chart.draw(data, {
+            title: 'Wimp Weather Station'
+          });
+
+        });
+
+      }
+
+      // load chart lib
+      google.load('visualization', '1', {
+        packages: ['corechart']
+      });
+
+      // call drawChart once google charts is loaded
+      google.setOnLoadCallback(drawChart);
+
+    </script>
+
+</head>
+<body>
+<div id="chart" style="width: 100%;"></div>
+</body>
+</html>
